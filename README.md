@@ -1,6 +1,6 @@
 Basic fishing script for exile by JackFrost 
 
-modify by Serveratze
+modify by Serveratze [Fishing Boat]
 
 ---------------------------------------------------------------------------------
 
