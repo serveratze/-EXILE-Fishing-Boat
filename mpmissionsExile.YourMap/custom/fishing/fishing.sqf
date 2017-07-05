@@ -4,7 +4,7 @@
 
 diag_log format['A Player starting fishing'];
 
-private["_fisharray", "_randomFish"];
+private["_fisharray"];
 
 if (ExileClientPlayerIsInCombat) exitWith
 {
@@ -52,8 +52,7 @@ if ("Exile_Item_BurlapSack" in magazines player) then {
 		disableUserInput true;
 		["The net was ejected!"] spawn ExileClient_gui_baguette_show;
 		     uisleep 12;
-		    _randomFish = random 1;
-    if (_randomFish > 0.85) then {
+    if (random 1 > 0.85) then {
 	        _fisharray =[
 	                        "Exile_Item_Catsharkfilet_Raw",
 	                        "Exile_Item_MackerelFilet_Raw",
@@ -70,6 +69,13 @@ if ("Exile_Item_BurlapSack" in magazines player) then {
 	{
 	["They did not catch anything."] spawn ExileClient_gui_baguette_show;
 	};
+    if (random 1 > 0.97) then {
+        player removeItem "Exile_Item_BurlapSack";
+            [
+	        "InfoTitleAndText",
+	        ["Fishing Info", "You've lost the net!"]
+	    ] call ExileClient_gui_toaster_addTemplateToast;		
+    };	
 };
 
 uisleep 1;	
