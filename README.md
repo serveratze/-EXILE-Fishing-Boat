@@ -1,3 +1,5 @@
+/////////////////////////////// ////////// Exile mod 1.0.4 'Pineapple' Compatible ////////// ///////////////////////////////
+
 Basic fishing script for exile by JackFrost 
 
 modify by Serveratze [Fishing Boat]
